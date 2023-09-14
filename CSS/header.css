@@ -1,0 +1,86 @@
+.header {
+    background: url(../img/bit.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 850px;
+    flex-shrink: 0;
+    padding: 2%;
+}
+
+.header__contact {
+    margin-left: 10px;
+    width: 90px;
+    height: 34px;
+    background: #FFFFFF;
+    color: #606B74;
+    text-align: center;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 21.5px;
+    border: 0;
+    border-radius: 4px;
+    margin-top: -9px;
+}
+
+.header__nav {
+    display: flex;
+    margin-top: 10px;
+
+}
+
+.header__nav aside {
+    display: flex;
+    margin-left: 370px;
+
+}
+
+.header__nav ul {
+    display: flex;
+}
+
+.header__nav_item {
+    margin-right: 40px;
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.title {
+    color: #fff;
+    margin-top: 186px;
+    margin-left: 116px;
+    font-family: Rubik;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 0;
+}
+
+.parahraph {
+    width: 440px;
+    color: #fff;
+    font-family: Merriweather;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 12px;
+    margin-left: 116px;
+    margin-right: 200;
+}
+
+.header__logo {
+    margin-left: 122px;
+    margin-top: 10px;
+}
+
+.class__hero {
+    width: 700px;
+    margin-left: 13px;
+}
+
+.img {
+    margin-top: -111px;
+    margin-left: 850px;
+
+}
