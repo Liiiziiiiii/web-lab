@@ -1,0 +1,57 @@
+.footer {
+    width: 1160px;
+    height: 92px;
+    align-items: center;
+    background: #26353B;
+    margin: 80px auto;
+    margin-top: 50px;
+
+}
+
+.container__footer {
+    display: flex;
+    margin-top: 33px;
+
+}
+
+.label {
+    color: #FFF;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.6;
+    margin-top: 40px;
+    margin-left: 50px;
+
+}
+
+.logo__footer {
+    fill: #FFF;
+    margin-left: 390px;
+    margin-top: 40px;
+    background-color: #26353B;
+
+}
+
+.text__cookies {
+    margin-top: 40px;
+    margin-left: 310px;
+    opacity: 0.6;
+    color: #FFF;
+    text-align: right;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+.text__privacybeleid {
+    margin-top: 40px;
+    margin-left: 30px;
+    opacity: 0.6;
+    color: #FFF;
+    text-align: right;
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 500;
+}

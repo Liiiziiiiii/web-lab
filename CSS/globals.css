@@ -1,0 +1,31 @@
+.body {
+    font-family: "Roboto", "Arial", sans-serif;
+    color: #ffffff;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    max-width: 636px;
+    max-height: 1130px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color:#ffffff;
+}
+
+li {
+    display: block;
+
+}
+button {
+    border: 0;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
