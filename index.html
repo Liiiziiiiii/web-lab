@@ -1,184 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DragNDrop App</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/custom.css" />
 
-    <title>Lab_1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
 
-
+    <!-- UUID library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
 </head>
 
-<body>
-    <section class="hero">
-        <header class="header">
+<body class="bg-light">
+    <div class="container p-3">
+        <div class="row mb-3">
+            <h1 class="text-center">Stone</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mt-2">
 
-            <!-- <div class="header__menu" onclick="toggleMenu()">
-                <img src="img/menu-icon.svg" alt="Menu icon">
-            </div> -->
+                <div class="container">
+                    <a href="#" class="button">Add card</a>
+                </div>
 
-            <div class="header__lan">
-
-                <nav class="header__nav">
-                    <article>
-                        <img class="header__logo" src="img/Logo horizontal.png" alt="logo">
-                    </article>
-
-                    <aside class="header__nav aside">
-                        <div class="burger__div">
-                            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-                            <div class="menu_box">
-                                <ul class="burger__menu">
-                                    <li class="header__nav_item"><a href="">Modelen</a></li>
-                                    <li class="header__nav_item"><a href="">Kopen</a></li>
-                                    <li class="header__nav_item"><a href="">Huren</a></li>
-                                    <li class="header__nav_item"><a href="">Nieuws</a></li>
-                                </ul>
-                                <label for="menu-toggle" class="close-menu-button">✕</label>
+                <div class="popup">
+                    <div class="popup-content">
+                        <form id="add_form" class="bg-light">
+                            <img src="./assets/close.png" alt="Close" class="close">
+                            <h3 class="mb-3">Create card</h3>
+                            <div class="mb-3">
+                                <label for="title_input" class="form-label">Name of the stone</label>
+                                <input type="text" class="form-control" id="title_input" required />
                             </div>
-
-                            <button class="header__contact">Contact</button>
-                    </aside>
-            </div>
-            </div>
-
-            <div class="standart__screen">
-                <aside class="header__nav aside">
-                    <ul>
-                        <li class="header__nav_item"><a href="">Modelen</a></li>
-                        <li class="header__nav_item"><a href="">Kopen</a></li>
-                        <li class="header__nav_item"><a href="">Huren</a></li>
-                        <li class="header__nav_item"><a href="">Nieuws</a></li>
-                    </ul>
-                    <button class="header__contact">Contact</button>
-                </aside>
-            </div>
-            </nav>
-            </div>
-
-            <div class="container hero">
-                <div class="hero_iner">
-                    <div class="class__hero">
-                        <h1 class="title">
-                            Sustainable tiny houses <br>
-                        </h1>
-                        <p class="parahraph">
-                            An ecological tiny house is <br>
-                            constructed from as much <br>
-                            sustainable natural <br>
-                            materials as possible <br>
-                        </p>
-                    </div>
-                    <div class="img">
-                        <img src="img/Bekijk de film.png" alt="kino" class="hero_img">
+                            <div class="mb-3">
+                                <label for="carats_input" class="form-label">Number of carats</label>
+                                <input type="number" class="form-control" id="carats_input" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="price_input" class="form-label">Price</label>
+                                <input type="number" class="form-control" id="price_input" required />
+                            </div>
+                            <button id="submit_button" type="button" class="btn btn-primary">
+                                Submit
+                            </button>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </header>
-    </section>
 
-    <section class="section__02">
-        <div class="inner__section__02-text">
-            <h2 class="title__section-02">Durable materials</h2>
-            <p class="text__section-02">All EcoCabins have a high insulation value,
-                are produced with sustainable and / or natural materials
-                where possible and have the "round corners" as a striking
-                external characteristic, made possible by the specific
-                use of materials. The advantages of building with wood
-                are many: wood is light, flexible, insulates well and
-                builds quickly and efficiently.</p>
-            <button class="btn__section-02">Read more</button>
-        </div>
-
-        <img src="./img/IMG.jpg" alt="foto" class="foto__section-02">
-
-    </section>
-
-    <section class="section__03-head"></section>
-
-    <section class="section__03-body">
-        <div class=" container container__title__section-03">
-            <h2 class="title__section-03">Innovative</h2>
-        </div>
-        <div class="container container_text_section-03">
-            <p class="text__section-03">Our goal is to continuously
-                further develop and innovate the EcoCabins,
-                so that the EcoCabins are ultimately 100%
-                sustainable and circular. A condition for
-                this is that the EcoCabins remain
-                affordable. With the help of the sun,
-                the wind and the best
-                insulation you can enjoy.</p>
-
-            <p class="text2__section-03">All EcoCabins have a high insulation
-                value, are produced with sustainable and / or natural materials where
-                possible and have the 'round corners' as a striking external characteristic,
-                made possible by the specific use of materials.
-                The advantages of building.</p>
-        </div>
-
-
-        </container>
-    </section>
-
-    <section class="section__04">
-        <div class="inner_section_04">
-            <img src="./img/C0283T01.jpg" alt="" class="img__section-04">
-            <div class="colum">
-                <div class="cotainer container__04">
-                    <h3 class="title1__section-04">Wood</h3>
-                    <p class="text1__section-04">De draagconstructies van
-                        EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
-
-                    <h3 class="title2__section-04">Workmanship</h3>
-                    <p class="text2__section-04">De draagconstructies van
-                        EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
-
-                    <h3 class="title3__section-04">Steel base</h3>
-                    <p class="text3__section-04">Het stalen onderstel is sterk zijn en
-                        heeft de benodigde stijfheid die</p>
-
-                </div>
-
-                <div class="container container2-04">
-                    <h3 class="title4__section-04">Glass wool </h3>
-                    <p class="text4__section-04">De combinatie van glaswol
-                        met een houtskelet constructie geeft een.</p>
-
-                    <h3 class="title5__section-04">Triple glass</h3>
-                    <p class="text5__section-04">De combinatie van
-                        glaswol met een houtskelet constructie geeft een.</p>
-
-                    <h3 class="title6__section-04">Infrared floor</h3>
-                    <p class="text6__section-04">De vloer wordt opgewarmd
-                        middels opgewekte warmte uit eigen zonne-energie.</p>
+                <div class="mt-5">
+                    <h4 class="mb-3">Find cards</h4>
+                    <input id="find_input" type="text" class="form-control" />
+                    <button id="find_button" type="button" class="btn btn-primary mt-4">
+                        Find
+                    </button>
+                    <button id="cancel_find_button" type="button" class="btn btn-danger mt-4">
+                        Cancel
+                    </button>
                 </div>
             </div>
 
-        </div>
+            <ul id="items_container" class="col-md-4 mt-5 mt-md-2 mx-auto">
+            </ul>
 
-    </section>
-
-    <section>
-        <footer class="footer">
-            <div class="container__footer">
-                <label for="info@eco-cabins.com" class="label">info@eco-cabins.com</label>
-                <img src="./img/logo.svg" alt="logo" class="logo__footer">
-                <div class="text__footer">
-                    <p class="text__cookies">Cookies</p>
-                    <p class="text__privacybeleid">Privacybeleid</p>
+            <div class="col-md-4">
+                <div class="p-4">
+                    <div class="delete-section">
+                        <div class="text-center">
+                            <img class="delete-section__icon mb-4" src="./assets/basket.svg" alt="basket" />
+                            <div>Drop here to delete</div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-        </footer>
-
-    </section>
-
+    <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>
