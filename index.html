@@ -2,52 +2,84 @@
 <html>
 
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lab_1</title>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/style.css">
 
+
 </head>
 
 <body>
-    <section class="hero">  
-        <div class="container">
-            <header class="header">
+    <section class="hero">
+        <header class="header">
+
+            <!-- <div class="header__menu" onclick="toggleMenu()">
+                <img src="img/menu-icon.svg" alt="Menu icon">
+            </div> -->
+
+            <div class="header__lan">
+
                 <nav class="header__nav">
                     <article>
                         <img class="header__logo" src="img/Logo horizontal.png" alt="logo">
                     </article>
-                    <aside class="header__nav aside">
-                        <ul>
-                            <li class="header__nav_item"><a href="">Modelen</a></li>
-                            <li class="header__nav_item"><a href="">Kopen</a></li>
-                            <li class="header__nav_item"><a href="">Huren</a></li>
-                            <li class="header__nav_item"><a href="">Nieuws</a></li>
-                        </ul>
-                        <button class="header__contact">Contact</button>
-                    </aside>
-                </nav>
 
-                <div class="container hero">
-                    <div class="hero_iner">
-                        <div class="class__hero">
-                            <h1 class="title">
-                                Sustainable tiny houses <br>
-                            </h1>
-                            <p class="parahraph">
-                                An ecological tiny house is <br>
-                                constructed from as much <br>
-                                sustainable natural <br>
-                                materials as possible <br>
-                            </p>
-                        </div>
-                        <div class="img">
-                            <img src="img/Bekijk de film.png" alt="kino" class="hero_img">
-                        </div>
+                    <aside class="header__nav aside">
+                        <div class="burger__div">
+                            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                            <div class="menu_box">
+                                <ul class="burger__menu">
+                                    <li class="header__nav_item"><a href="">Modelen</a></li>
+                                    <li class="header__nav_item"><a href="">Kopen</a></li>
+                                    <li class="header__nav_item"><a href="">Huren</a></li>
+                                    <li class="header__nav_item"><a href="">Nieuws</a></li>
+                                </ul>
+                                <label for="menu-toggle" class="close-menu-button">✕</label>
+                            </div>
+
+                            <button class="header__contact">Contact</button>
+                    </aside>
+            </div>
+            </div>
+
+            <div class="standart__screen">
+                <aside class="header__nav aside">
+                    <ul>
+                        <li class="header__nav_item"><a href="">Modelen</a></li>
+                        <li class="header__nav_item"><a href="">Kopen</a></li>
+                        <li class="header__nav_item"><a href="">Huren</a></li>
+                        <li class="header__nav_item"><a href="">Nieuws</a></li>
+                    </ul>
+                    <button class="header__contact">Contact</button>
+                </aside>
+            </div>
+            </nav>
+            </div>
+
+            <div class="container hero">
+                <div class="hero_iner">
+                    <div class="class__hero">
+                        <h1 class="title">
+                            Sustainable tiny houses <br>
+                        </h1>
+                        <p class="parahraph">
+                            An ecological tiny house is <br>
+                            constructed from as much <br>
+                            sustainable natural <br>
+                            materials as possible <br>
+                        </p>
+                    </div>
+                    <div class="img">
+                        <img src="img/Bekijk de film.png" alt="kino" class="hero_img">
                     </div>
                 </div>
-
-        </div>
-
+            </div>
+        </header>
     </section>
 
     <section class="section__02">
@@ -95,35 +127,38 @@
     </section>
 
     <section class="section__04">
-        <img src="./img/C0283T01.jpg" alt="" class="img__section-04">
-        <div class="cotainer container__04">
-            <h3 class="title1__section-04">Wood</h3>
-            <p class="text1__section-04">De draagconstructies van
-                EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
+        <div class="inner_section_04">
+            <img src="./img/C0283T01.jpg" alt="" class="img__section-04">
+            <div class="colum">
+                <div class="cotainer container__04">
+                    <h3 class="title1__section-04">Wood</h3>
+                    <p class="text1__section-04">De draagconstructies van
+                        EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
 
-            <h3 class="title2__section-04">Workmanship</h3>
-            <p class="text2__section-04">De draagconstructies van
-                EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
+                    <h3 class="title2__section-04">Workmanship</h3>
+                    <p class="text2__section-04">De draagconstructies van
+                        EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
 
-            <h3 class="title3__section-04">Steel base</h3>
-            <p class="text3__section-04">Het stalen onderstel is sterk zijn en
-                heeft de benodigde stijfheid die</p>
+                    <h3 class="title3__section-04">Steel base</h3>
+                    <p class="text3__section-04">Het stalen onderstel is sterk zijn en
+                        heeft de benodigde stijfheid die</p>
 
-        </div>
+                </div>
 
-        <div class="container container2-04">
-            <h3 class="title4__section-04">Glass wool </h3>
-            <p class="text4__section-04">De combinatie van glaswol
-                met een houtskelet constructie geeft een.</p>
+                <div class="container container2-04">
+                    <h3 class="title4__section-04">Glass wool </h3>
+                    <p class="text4__section-04">De combinatie van glaswol
+                        met een houtskelet constructie geeft een.</p>
 
-            <h3 class="title5__section-04">Triple glass</h3>
-            <p class="text5__section-04">De combinatie van
-                glaswol met een houtskelet constructie geeft een.</p>
+                    <h3 class="title5__section-04">Triple glass</h3>
+                    <p class="text5__section-04">De combinatie van
+                        glaswol met een houtskelet constructie geeft een.</p>
 
-            <h3 class="title6__section-04">Infrared floor</h3>
-            <p class="text6__section-04">De vloer wordt opgewarmd
-                middels opgewekte warmte uit eigen zonne-energie.</p>
-
+                    <h3 class="title6__section-04">Infrared floor</h3>
+                    <p class="text6__section-04">De vloer wordt opgewarmd
+                        middels opgewekte warmte uit eigen zonne-energie.</p>
+                </div>
+            </div>
 
         </div>
 
@@ -134,8 +169,10 @@
             <div class="container__footer">
                 <label for="info@eco-cabins.com" class="label">info@eco-cabins.com</label>
                 <img src="./img/logo.svg" alt="logo" class="logo__footer">
-                <p class="text__cookies">Cookies</p>
-                <p class="text__privacybeleid">Privacybeleid</p>
+                <div class="text__footer">
+                    <p class="text__cookies">Cookies</p>
+                    <p class="text__privacybeleid">Privacybeleid</p>
+                </div>
             </div>
 
         </footer>
