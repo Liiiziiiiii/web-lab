@@ -38,15 +38,21 @@
                             <h3 class="mb-3">Create card</h3>
                             <div class="mb-3">
                                 <label for="title_input" class="form-label">Name of the stone</label>
-                                <input type="text" class="form-control" id="title_input" required />
+                                <!-- <input type="text" class="form-control" id="title_input" required /> -->
+                                <input id="title_input" type="text" placeholder="Title" required>
+                                <div class="error-message"></div>
                             </div>
                             <div class="mb-3">
                                 <label for="carats_input" class="form-label">Number of carats</label>
-                                <input type="number" class="form-control" id="carats_input" required />
+                                <!-- <input type="number" class="form-control" id="carats_input" required /> -->
+                                <input id="carats_input" type="number" placeholder="Carats" required>
+                                <div class="error-message"></div>
                             </div>
                             <div class="mb-3">
                                 <label for="price_input" class="form-label">Price</label>
-                                <input type="number" class="form-control" id="price_input" required />
+                                <!-- <input type="number" class="form-control" id="price_input" required /> -->
+                                <input id="price_input" type="number" placeholder="Price" required>
+                                <div class="error-message"></div>
                             </div>
                             <button id="submit_button" type="button" class="btn btn-primary">
                                 Submit
@@ -54,6 +60,7 @@
                         </form>
                     </div>
                 </div>
+
 
                 <div class="mt-5">
                     <h4 class="mb-3">Find cards</h4>
@@ -67,7 +74,21 @@
                 </div>
             </div>
 
+
             <ul id="items_container" class="col-md-4 mt-5 mt-md-2 mx-auto">
+                <div id="stones">
+                    <div id="stone${id}" class="card mb-3 item-card" draggable="true">
+                        <div class="card-body">
+                            <h5 class="card-title">title ${name}</h5>
+                            <p class="card-text">carats ${carats}</p>
+                            <p class="card-text">price ${price}</p>
+                            <button type="button" class="btn btn-info">
+                                delete
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
             </ul>
 
             <div class="col-md-4">
@@ -83,7 +104,7 @@
         </div>
     </div>
 
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
