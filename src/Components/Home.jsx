@@ -1,10 +1,11 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React, { useEffect } from 'react';
+import Navbar from './Navbar';
 import Jewelry from './Jewelry';
-import BannerImage from "../Asserts/header.jpg"
-import { FiArrowRight } from "react-icons/fi"
+import BannerImage from '../Asserts/header.jpg';
+import { FiArrowRight } from 'react-icons/fi';
 
 const Home = () => {
+
     return (
         <div className="home-container">
             <Navbar />
@@ -14,7 +15,7 @@ const Home = () => {
                         Minimalist jewelry made of gold
                     </h1>
                     <p className="primary-text">
-                        you don't know what to give your
+                        You don't know what to give your
                         wife or girlfriend - give a necklace or a ring
                     </p>
                     <button className="secondary-button">
@@ -27,9 +28,7 @@ const Home = () => {
             </div>
             <Jewelry />
         </div>
+    );
+};
 
-
-    )
-}
-
-export default Home
+export default Home;
