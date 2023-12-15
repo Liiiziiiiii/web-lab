@@ -16,7 +16,8 @@ const Navbar = () => {
             <div className="navbar-links-container">
                 <Link to="/">Home</Link>
                 <Link to="/catalog">Catalog</Link>
-                <a href="">Cart</a>
+                <Link to="/additem">Cart</Link>
+                {/* <a href="">Cart</a> */}
                 <a href="">Contact</a>
                 <a href="">
                     <BsCart2 className="navbar-cart-icon" />
