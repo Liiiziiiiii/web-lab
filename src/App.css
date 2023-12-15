@@ -38,6 +38,17 @@ img {
   display: flex;
 }
 
+.form-control {
+  width: 200px;
+  height: 30px;
+  background-color: #efece6;
+  color: rgb(19, 14, 14);
+}
+
+.form-control:focus {
+  border: 3px solid #d08a8a;
+}
+
 .secondary-button-item-go-back {
   border-radius: 8px;
   font-size: 1rem;
