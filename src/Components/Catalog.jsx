@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { AiOutlineSearch } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 import { ClipLoader, FadeLoader } from 'react-spinners';
-import Navbar from './Navbar';
 import { debounce } from 'lodash';
 
 
@@ -12,46 +12,46 @@ const Catalog = () => {
     const [filteredItems, setFilteredItems] = useState([]);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-
-    // useEffect(() => {
-    //     // setLoading(true)
-    //     setTimeout(() => {
-    //         setLoading(false)
-    //     }, 5000)
-    // }, [])
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
-        // Simulate loading for 5 seconds
         const timeoutId = setTimeout(() => {
-            setLoading(false); // Set loading to false after the timeout
+            setLoading(false); 
         }, 5000);
 
-        // Cleanup the timeout to avoid potential memory leaks
         return () => clearTimeout(timeoutId);
-    }, []); // Empty
+    }, []); 
 
     useEffect(() => {
         setLoading(true);
         getAllJewelry();
     }, []);
 
-    // useEffect(() => {
-    //     // Fetch jewelry data only if not in the initial loading state
-    //     if (!loading) {
-    //         getAllJewelry();
-    //     }
-    // }, [loading]);
+
+    useEffect(() => {
+        axios.get('http://localhost:5500/api/jewelry', {
+            params: {
+                category: selectedFilters,
+                searchTerm: searchTerm,
+            },
+        })
+        .then((res) => {
+        })
+        .catch((error) => {
+            console.error('Error fetching filtered jewelry data:', error);
+        });
+    }, [selectedFilters, searchTerm]);
 
 
     const getAllJewelry = async () => {
         try {
-            const res = await fetch('http://localhost:5500/api/jewelry');
+            const res = await axios.get('http://localhost:5500/api/jewelry');
 
-            if (!res.ok) {
+            if (res.status !== 200) {
                 throw new Error(`HTTP error! Status: ${res.status}`);
             }
 
-            const jewelriesData = await res.json();
+            const jewelriesData = res.data; 
             console.log(jewelriesData);
             setJewelries(jewelriesData);
         } catch (error) {
@@ -61,15 +61,18 @@ const Catalog = () => {
         }
     };
 
-
     useEffect(() => {
         setLoading(true);
         getAllJewelry();
     }, []);
 
     const Search = debounce((event) => {
-        setFilteredItems(jewelries.filter(item => item.title.toLowerCase().includes(event.target.value.toLowerCase())));
+        setSearchTerm(event.target.value);
+        setFilteredItems(
+            jewelries.filter(item => item.title.toLowerCase().includes(event.target.value.toLowerCase()))
+        );
     }, 300);
+    
 
     const filters = ["ring", "necklace"];
 
@@ -86,6 +89,8 @@ const Catalog = () => {
         filterItems();
     }, [selectedFilters]);
 
+    
+
     const filterItems = () => {
         if (selectedFilters.length > 0) {
             const filteredData = jewelries.filter((item) => selectedFilters.includes(item.category));
@@ -97,10 +102,9 @@ const Catalog = () => {
 
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <div className="input-group">
                 <input
-                    // type="search"
                     className="form-control"
                     placeholder="Search..."
                     // aria-label="Search"

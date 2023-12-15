@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
-import Navbar from './Navbar';
-
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useLocation } from 'react-router-dom';
+import { addToCart } from "../features/cartSlice";
 
 const ItemPage = () => {
     const [detail, setDetail] = useState([]);
     const location = useLocation();
     const itemDetail = location.state?.detail;
+
+    const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
@@ -18,11 +18,21 @@ const ItemPage = () => {
         }
     }, [itemDetail]);
 
+    useEffect(() => {
+        if (!itemDetail) {
+            navigate('/catalog');
+        }
+    }, [itemDetail, navigate]);
+
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+        // navigate("/additem");
+    };
+
+
+
     return (
         <div>
-
-            <Navbar/>
-
             {detail.map((x) => (
                 <div className='detail_info' key={x.title}>
                     <div className='img-box'>
@@ -32,8 +42,9 @@ const ItemPage = () => {
                         <h2 className='item_page_title'>{x.title}</h2>
                         <p className='item_page_price'>Price: {x.price}</p>
                         <p className='item_page_des'>{x.des}</p>
+                        <p className='item_page_des'>{x.category}</p>
                         <div className='item_page_btn'>
-                            <button className='secondary-button-item'>Add To Cart</button>
+                            <button className='secondary-button-item' onClick={() => handleAddToCart(x)}>Add To Cart</button>
                             <button className='secondary-button-item-go-back' onClick={() => navigate(`/catalog`)}>Go Back</button>
                         </div>
                     </div>
